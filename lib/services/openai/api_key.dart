@@ -1,3 +1,3 @@
 class ApiKey {
-  static const String openAIApiKey = "YOUR_API_KE";
+  static const String openAIApiKey = "YOUR_API_KEY";
 }

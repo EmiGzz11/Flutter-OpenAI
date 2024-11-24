@@ -1,3 +1,5 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class ApiKey {
-  static const String openAIApiKey = "YOUR_API_KEY";
+  static String get openAIApiKey => dotenv.env['API_KEY'] ?? 'default_value';
 }

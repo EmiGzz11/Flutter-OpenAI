@@ -3,7 +3,11 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:open_ai/openai_entry_screen.dart';
 
 void main() async {
-  await dotenv.load();
+  try {
+    await dotenv.load(fileName: ".env"); // Carga el archivo .env
+  } catch (e) {
+    print('Error al cargar el archivo .env: $e');
+  }
   runApp(const MyApp());
 }
 
